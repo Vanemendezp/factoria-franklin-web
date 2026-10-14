@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arriendo de espacios para eventos | Factoría Franklin</title>
+<meta name="description" content="Arrienda el Patio Central (400 m², abierto) o el Galpón Multiuso (480 m², cerrado) de Factoría Franklin para ferias, lanzamientos y eventos públicos o privados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Dela+Gothic+One&family=Roboto+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-pagina="espacios">
+<div id="cabecera"></div>
+<main id="contenido">
+
+<section class="cabecera-pagina">
+  <div class="contenedor dos" style="align-items:end">
+    <div class="pila" style="--gap:16px">
+      <span class="etiqueta">Arriendo de espacios · eventos y exposiciones</span>
+      <h1 class="titulo-xl">Espacios</h1>
+    </div>
+    <p class="bajada">Dos espacios dentro de un edificio patrimonial de 1940, en pleno Barrio Franklin, para acciones públicas o privadas.</p>
+  </div>
+</section>
+
+<section class="seccion seccion--papel">
+  <div class="contenedor grilla" style="--min:420px;--gap:24px">
+    <article class="evento">
+      <img class="evento-foto" src="assets/img/musica-patio.jpg" alt="Música en vivo en el Patio Central" width="1400" height="990" style="aspect-ratio:16/10">
+      <div class="evento-cuerpo" style="padding:28px;gap:14px">
+        <div class="evento-meta"><span>Espacio abierto</span><span>400 m²</span></div>
+        <h2 class="titulo-m">Patio Central</h2>
+        <p>En este sector de Factoría Franklin se recibe diariamente a los muchos visitantes que recorren las diferentes fábricas y talleres. Este patio es muy especial, ya que permite una pausa con una atmósfera tranquila y de buen ambiente.</p>
+      </div>
+    </article>
+    <article class="evento">
+      <img class="evento-foto" src="assets/img/inauguracion-factor-f.jpg" alt="Público en un evento de la Factoría" width="1400" height="887" style="aspect-ratio:16/10">
+      <div class="evento-cuerpo" style="padding:28px;gap:14px">
+        <div class="evento-meta"><span>Espacio cerrado</span><span>480 m²</span></div>
+        <h2 class="titulo-m">Galpón Multiuso</h2>
+        <p>Espacio versátil, es el principal foco de las muchas actividades dentro de Factoría Franklin. Cuenta con una infraestructura equipada y amplia para el desarrollo de diferentes acciones públicas o privadas.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenedor dos">
+    <div class="pila">
+      <span class="etiqueta">Plano</span>
+      <h2 class="titulo-l">Dónde está cada espacio</h2>
+      <p class="bajada">El Patio Central está al centro del edificio, con acceso directo desde Franklin 741. El Galpón de Eventos está hacia San Francisco.</p>
+    </div>
+    <img src="assets/img/plano-1.jpg" alt="Plano de Factoría Franklin: Patio Central al centro, Galpón de Eventos hacia San Francisco, edificios A y B, acceso por Franklin 741 y Metro Bío Bío" width="1400" height="1004" loading="lazy" style="width:100%;border:var(--borde)">
+  </div>
+</section>
+
+<section class="seccion seccion--mostaza">
+  <div class="contenedor pila" style="--gap:28px">
+    <div class="pila" style="--gap:10px">
+      <span class="etiqueta">Eventos realizados en la Factoría</span>
+      <h2 class="titulo-l">Aquí ya se hicieron</h2>
+    </div>
+    <ul class="tiempo">
+      <li><b>+6.300</b><p>personas en la primera edición de Bacán tu Casa, feria de diseño y decoración.</p></li>
+      <li><b>+40</b><p>variedades de cervezas artesanales e hidromiel en la Fonda Medieval Party.</p></li>
+      <li><b>1°</b><p>Festival del Vermut en Chile, realizado en el galpón techado de la Factoría.</p></li>
+      <li><b>2 días</b><p>de Santiago IPA Fest 2026, con cervecerías artesanales y música en vivo.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="seccion" id="cotizar">
+  <div class="contenedor dos" style="align-items:start">
+    <div class="pila">
+      <span class="etiqueta">Arriendo de espacios</span>
+      <h2 class="titulo-l">Cuéntanos tu evento</h2>
+      <p class="bajada">Completa el formulario y te responderemos a la brevedad.</p>
+      <p class="suave">También puedes escribir a operaciones@factoria-franklin.cl</p>
+    </div>
+    <div>
+      <form class="caja form" data-form="arriendo" data-exito="arriendo-ok" novalidate>
+        <div class="campos">
+          <div class="campo"><label for="a-nombre">Nombre</label><input id="a-nombre" name="nombre" required autocomplete="name"></div>
+          <div class="campo"><label for="a-correo">Correo</label><input id="a-correo" name="correo" type="email" required autocomplete="email"></div>
+          <div class="campo"><label for="a-negocio">Negocio o empresa</label><input id="a-negocio" name="negocio" autocomplete="organization"></div>
+          <div class="campo"><label for="a-espacio">Espacio</label><select id="a-espacio" name="espacio"><option>Patio Central (400 m²)</option><option>Galpón Multiuso (480 m²)</option><option>No lo sé todavía</option></select></div>
+          <div class="campo"><label for="a-tipo">Tipo de evento</label><select id="a-tipo" name="tipo"><option>Feria</option><option>Lanzamiento de marca</option><option>Festival</option><option>Exposición</option><option>Evento privado</option><option>Otro</option></select></div>
+          <div class="campo"><label for="a-fecha">Fecha tentativa</label><input id="a-fecha" name="fecha" type="date"></div>
+        </div>
+        <div class="campo"><label for="a-mensaje">Mensaje</label><textarea id="a-mensaje" name="mensaje" placeholder="Cuántas personas esperas, horario y lo que necesitas"></textarea></div>
+        <p class="error" hidden>Completa tu nombre y un correo válido.</p>
+        <button class="btn btn--tinta" type="submit">Enviar solicitud</button>
+      </form>
+      <div class="caja exito" id="arriendo-ok" hidden tabindex="-1">
+        <span class="etiqueta" style="color:var(--azul)">Solicitud enviada</span>
+        <span class="titulo-m">Gracias, te responderemos a la brevedad</span>
+        <p class="suave">El equipo de operaciones revisará la disponibilidad del espacio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="pie"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fábricas y talleres | Factoría Franklin</title>
+<meta name="description" content="Destilerías, vermutería, chocolatería, café de especialidad, ramen, cocina peruana y más: las fábricas de Factoría Franklin con sus horarios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Dela+Gothic+One&family=Roboto+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-pagina="fabricas">
+<div id="cabecera"></div>
+<main id="contenido">
+
+<section class="cabecera-pagina">
+  <div class="contenedor dos" style="align-items:end">
+    <div class="pila" style="--gap:16px">
+      <span class="etiqueta">Directorio del edificio</span>
+      <h1 class="titulo-xl">Fábricas</h1>
+    </div>
+    <p class="bajada">Hoy el edificio reúne una gran variedad de productos y servicios, cada uno con identidad propia, que los distingue y motiva a exhibir sus procesos cariñosamente a cada visitante.</p>
+  </div>
+</section>
+
+<section class="seccion seccion--papel">
+  <div class="contenedor pila" style="--gap:28px">
+    <div class="fila fila--entre" style="--gap:20px">
+      <span class="etiqueta" id="cuenta-fab" aria-live="polite"></span>
+      <div class="fila" id="filtros-fab" data-chips="uno" role="group" aria-label="Filtrar fábricas" style="--gap:8px">
+        <button class="chip" type="button" aria-pressed="true">Todos</button>
+        <button class="chip" type="button" aria-pressed="false">Bebidas</button>
+        <button class="chip" type="button" aria-pressed="false">Gastronomía</button>
+        <button class="chip" type="button" aria-pressed="false">Licores</button>
+        <button class="chip" type="button" aria-pressed="false">Pastelerías</button>
+      </div>
+    </div>
+    <div class="directorio" data-directorio data-con-horario data-filtros="filtros-fab" data-cuenta="cuenta-fab"></div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenedor dos">
+    <div class="pila">
+      <span class="etiqueta">Trabaja con nosotros</span>
+      <h2 class="titulo-l">¿Quieres trabajar en un taller o fábrica?</h2>
+      <p class="bajada">Si estás interesado en postular a trabajos en alguno de los talleres o fábricas de Factoría Franklin, envíanos tu currículum.</p>
+      <a class="btn btn--tinta" href="contacto.html#trabaja" style="align-self:flex-start">Enviar mi CV</a>
+    </div>
+    <div class="pila">
+      <span class="etiqueta">Arriendos</span>
+      <h2 class="titulo-l">¿Buscas un espacio para tu negocio?</h2>
+      <p class="bajada">Si estás creciendo y buscas un espacio para desarrollar tu negocio, escríbenos.</p>
+      <a class="btn" href="contacto.html" style="align-self:flex-start">Escribir a la administración</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="pie"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

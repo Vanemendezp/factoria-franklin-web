@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto y cómo llegar | Factoría Franklin</title>
+<meta name="description" content="Factoría Franklin, Franklin 741, Santiago, entre Santa Rosa y San Francisco. A pasos del Metro Bío Bío y Metro Franklin. operaciones@factoria-franklin.cl">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Dela+Gothic+One&family=Roboto+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-pagina="contacto">
+<div id="cabecera"></div>
+<main id="contenido">
+
+<section class="cabecera-pagina">
+  <div class="contenedor dos" style="align-items:end">
+    <div class="pila" style="--gap:16px">
+      <span class="etiqueta">Visítanos en Barrio Franklin</span>
+      <h1 class="titulo-xl">Contacto</h1>
+    </div>
+    <div class="datos">
+      <div><small>Dirección</small><span>Franklin 741, Santiago Centro</span></div>
+      <div><small>Entre</small><span>Santa Rosa y San Francisco</span></div>
+      <div><small>Metro</small><span>Bío Bío y Franklin</span></div>
+      <div><small>Correo</small><span>operaciones@factoria-franklin.cl</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--papel">
+  <div class="contenedor dos" style="align-items:start">
+    <div class="pila">
+      <span class="etiqueta">Escríbenos</span>
+      <h2 class="titulo-l">Administración Factoría</h2>
+      <a class="btn btn--tinta" href="https://www.google.com/maps/search/?api=1&query=Factor%C3%ADa+Franklin+Franklin+741+Santiago" style="align-self:flex-start">Cómo llegar en Google Maps</a>
+      <div class="fila"><a class="enlace-flecha" href="https://www.instagram.com/factoria_franklin/">Instagram</a><a class="enlace-flecha" href="https://www.facebook.com/franklin.factory.cl/">Facebook</a></div>
+      <img src="assets/img/plano-1.jpg" alt="Plano de ubicación: Franklin 741 entre San Francisco y Santa Rosa, con el Metro Bío Bío cerca" width="1400" height="1004" loading="lazy" style="width:100%;border:var(--borde)">
+    </div>
+    <div>
+      <form class="caja form" data-form="contacto" data-exito="contacto-ok" novalidate>
+        <div class="campos">
+          <div class="campo"><label for="c-nombre">Nombre</label><input id="c-nombre" name="nombre" required autocomplete="name"></div>
+          <div class="campo"><label for="c-correo">Correo</label><input id="c-correo" name="correo" type="email" required autocomplete="email"></div>
+        </div>
+        <div class="campo"><label for="c-asunto">Asunto</label><select id="c-asunto" name="asunto"><option>Consulta general</option><option>Arriendo de espacios</option><option>Quiero instalar mi fábrica o taller</option><option>Prensa</option><option>Visitas guiadas para grupos</option></select></div>
+        <div class="campo"><label for="c-mensaje">Mensaje</label><textarea id="c-mensaje" name="mensaje" required></textarea></div>
+        <p class="error" hidden>Completa tu nombre, un correo válido y tu mensaje.</p>
+        <button class="btn btn--tinta" type="submit">Enviar mensaje</button>
+      </form>
+      <div class="caja exito" id="contacto-ok" hidden tabindex="-1">
+        <span class="titulo-m">Mensaje enviado</span>
+        <p class="suave">Te responderemos a la brevedad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="trabaja">
+  <div class="contenedor dos" style="align-items:start">
+    <div class="pila">
+      <span class="etiqueta">Trabaja con nosotros</span>
+      <h2 class="titulo-l">Envíanos tu CV</h2>
+      <p class="bajada">Si estás interesado en postular a trabajos en alguno de los talleres o fábricas de Factoría Franklin, envíanos tu currículum.</p>
+    </div>
+    <div>
+      <form class="caja form" data-form="cv" data-exito="cv-ok" novalidate>
+        <div class="campos">
+          <div class="campo"><label for="t-nombre">Nombre</label><input id="t-nombre" name="nombre" required autocomplete="name"></div>
+          <div class="campo"><label for="t-correo">Correo</label><input id="t-correo" name="correo" type="email" required autocomplete="email"></div>
+          <div class="campo"><label for="t-fono">Teléfono</label><input id="t-fono" name="telefono" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div class="campo"><label for="t-cv">Adjuntar CV (máx. 2 MB · doc, docx o pdf)</label><input id="t-cv" name="cv" type="file" accept=".doc,.docx,.pdf" style="padding:10px"></div>
+        <p class="error" hidden>Completa tu nombre, un correo válido y tu teléfono.</p>
+        <button class="btn btn--tinta" type="submit">Enviar CV</button>
+      </form>
+      <div class="caja exito" id="cv-ok" hidden tabindex="-1">
+        <span class="titulo-m">Recibimos tu CV</span>
+        <p class="suave">Lo compartiremos con los talleres y fábricas que estén buscando personas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="pie"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agenda | Factoría Franklin</title>
+<meta name="description" content="Ferias, exposiciones, música y visitas guiadas en Factoría Franklin, Franklin 741, Santiago. Entrada liberada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Dela+Gothic+One&family=Roboto+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-pagina="agenda">
+<div id="cabecera"></div>
+<main id="contenido">
+
+<section class="cabecera-pagina">
+  <div class="contenedor pila" style="--gap:16px">
+    <span class="etiqueta">Panoramas Factoría · actividades todo el año</span>
+    <h1 class="titulo-xl">Agenda</h1>
+    <p class="bajada">Ferias, exposiciones, música en el patio y visitas guiadas. Casi todo con entrada liberada.</p>
+  </div>
+</section>
+
+<section class="seccion seccion--papel">
+  <div class="contenedor pila" style="--gap:28px">
+    <div class="fila fila--entre" style="--gap:20px">
+      <h2 class="titulo-m">Próximas actividades</h2>
+      <div class="fila" id="filtros-agenda" data-chips="uno" role="group" aria-label="Filtrar agenda" style="--gap:8px">
+        <button class="chip" type="button" aria-pressed="true">Todo</button>
+        <button class="chip" type="button" aria-pressed="false">Ferias</button>
+        <button class="chip" type="button" aria-pressed="false">Arte</button>
+        <button class="chip" type="button" aria-pressed="false">Música</button>
+        <button class="chip" type="button" aria-pressed="false">Visitas</button>
+      </div>
+    </div>
+    <div class="grilla" data-agenda data-filtros="filtros-agenda" style="--min:290px"></div>
+  </div>
+</section>
+
+<section class="seccion seccion--azul">
+  <div class="contenedor dos">
+    <div class="pila">
+      <span class="etiqueta">Boletín digital</span>
+      <h2 class="titulo-l">Recibe la agenda en tu correo</h2>
+      <p class="bajada">Agenda, invitaciones, descuentos especiales y mucho más.</p>
+    </div>
+    <div>
+      <form class="caja form" data-form="agenda" data-mailchimp="boletin" data-exito="agenda-ok" novalidate>
+        <div class="campos">
+          <div class="campo"><label for="ag-nombre">Nombre</label><input id="ag-nombre" name="nombre" required autocomplete="given-name"></div>
+          <div class="campo"><label for="ag-correo">Correo</label><input id="ag-correo" name="correo" type="email" required autocomplete="email"></div>
+        </div>
+        <label class="check"><input type="checkbox" name="acepto" required> Acepto recibir el boletín digital de Factoría Franklin.</label>
+        <p class="error" hidden>Completa tu nombre, un correo válido y acepta recibir el boletín.</p>
+        <button class="btn btn--tinta" type="submit">Registrarme</button>
+      </form>
+      <div class="caja exito" id="agenda-ok" hidden tabindex="-1">
+        <span class="titulo-m">Ya estás en el boletín</span>
+        <p class="suave">Revisa tu correo para confirmar la suscripción.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion">
+  <div class="contenedor pila" style="--gap:28px">
+    <div class="pila" style="--gap:10px">
+      <span class="etiqueta">Registro actividades Factoría</span>
+      <h2 class="titulo-l">Lo que pasó en la Factoría</h2>
+      <p class="texto-largo suave">Registro de actividades y eventos realizados en Factoría Franklin.</p>
+    </div>
+    <div class="grilla" data-registro style="--min:280px"></div>
+  </div>
+</section>
+
+</main>
+<div id="pie"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

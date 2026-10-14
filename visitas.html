@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visitas guiadas gratis | Factoría Franklin</title>
+<meta name="description" content="Visitas guiadas sin costo por Factoría Franklin y Factor F. Domingo 18 de octubre a las 12:30, 14:00 y 16:00 hrs. Cupos limitados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Dela+Gothic+One&family=Roboto+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+.opcion { position: relative; display: block; cursor: pointer; }
+.opcion input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.opcion span { display: flex; flex-direction: column; gap: 4px; border: var(--borde); background: var(--blanco); padding: 14px 16px; min-height: 64px; }
+.opcion input:checked + span { background: var(--tinta); color: var(--papel); }
+.opcion input:focus-visible + span { outline: 3px solid var(--mostaza); outline-offset: 2px; }
+.opcion input:disabled + span { opacity: .45; cursor: not-allowed; }
+.opcion b { font: 700 16px var(--texto); }
+.opcion small { font-size: 14px; }
+.horas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.horas b { font: 700 20px var(--mono); }
+</style>
+</head>
+<body data-pagina="visitas">
+<div id="cabecera"></div>
+<main id="contenido">
+
+<section class="cabecera-pagina">
+  <div class="contenedor dos" style="align-items:start">
+    <div class="pila" style="--gap:22px">
+      <span class="etiqueta">Visitas guiadas · sin costo</span>
+      <h1 class="titulo-xl">Visita guiada Factoría Franklin</h1>
+      <p class="bajada">Un recorrido por este hub cultural de Barrio Franklin de la mano de un guía, que acompaña la experiencia con el contexto, la historia y las decisiones detrás de cada espacio.</p>
+      <img src="assets/img/recorrido-exposicion.jpg" alt="Grupo durante un recorrido en Factoría Franklin" width="1400" height="964" style="width:100%;aspect-ratio:16/10;object-fit:cover;border:var(--borde)">
+      <div class="datos">
+        <div><small>Fecha</small><span>Domingo 18 de octubre</span></div>
+        <div><small>Duración</small><span>Aprox. 40 minutos</span></div>
+        <div><small>Punto de reunión</small><span>Acceso principal, Franklin 741</span></div>
+        <div><small>Grupos</small><span>Reducidos, cupos limitados</span></div>
+      </div>
+      <div class="texto-largo">
+        <p>Desde el año 2022, Factoría Franklin realiza visitas guiadas sin costo por las dependencias e instalaciones que operan dentro del edificio. Los visitantes recorren talleres, locales y laboratorios, y comparten directamente con cada emprendimiento: historias, reseñas, anécdotas y degustaciones.</p>
+      </div>
+    </div>
+
+    <div>
+      <form class="caja form" data-form="visita" data-mailchimp="visita" data-exito="visita-ok" novalidate>
+        <h2 class="titulo-m">Reserva tu lugar</h2>
+        <fieldset class="pila" style="--gap:10px;border:0;padding:0;margin:0">
+          <legend class="grupo-label" style="margin-bottom:10px">Recorrido</legend>
+          <label class="opcion"><input type="radio" name="recorrido" value="Visita guiada Factoría Franklin" checked><span><b>Factoría Franklin</b><small>Edificio, historia y emprendimientos · aprox. 40 min</small></span></label>
+          <label class="opcion"><input type="radio" name="recorrido" value="Visita guiada Factor F: Ojos del Alma"><span><b>Factor F: Ojos del Alma</b><small>Exposición con guía especializado · aprox. 45 min · solo 12:30</small></span></label>
+        </fieldset>
+        <fieldset class="pila" style="--gap:10px;border:0;padding:0;margin:0">
+          <legend class="grupo-label" style="margin-bottom:10px">Horario · domingo 18 de octubre</legend>
+          <div class="horas">
+            <label class="opcion"><input type="radio" name="horario" value="12:30" checked><span><b>12:30</b></span></label>
+            <label class="opcion"><input type="radio" name="horario" value="14:00" data-solo-factoria><span><b>14:00</b></span></label>
+            <label class="opcion"><input type="radio" name="horario" value="16:00" data-solo-factoria><span><b>16:00</b></span></label>
+          </div>
+        </fieldset>
+        <div class="campos">
+          <div class="campo"><label for="v-nombre">Nombre y apellido</label><input id="v-nombre" name="nombre" required autocomplete="name"></div>
+          <div class="campo"><label for="v-correo">Correo</label><input id="v-correo" name="correo" type="email" required autocomplete="email"></div>
+          <div class="campo"><label for="v-fono">Celular</label><input id="v-fono" name="celular" type="tel" autocomplete="tel" placeholder="+56 9"></div>
+          <div class="campo"><label for="v-personas">¿Cuántas personas?</label><select id="v-personas" name="personas"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+        </div>
+        <div class="campo"><label for="v-origen">¿Cómo supiste de la visita?</label>
+          <select id="v-origen" name="origen"><option>Instagram</option><option>Boletín digital</option><option>Me lo recomendaron</option><option>Pasé por la Factoría</option><option>Google</option><option>Otro</option></select></div>
+        <label class="check"><input type="checkbox" name="boletin"> Quiero recibir el boletín digital con la agenda de la Factoría.</label>
+        <p class="error" hidden>Completa tu nombre y un correo válido.</p>
+        <button class="btn btn--tinta" type="submit">Confirmar inscripción</button>
+        <p class="suave" style="font-size:14px">Los horarios pueden cambiar según la fecha o la temporada. Las convocatorias se anuncian en el Instagram de la Factoría y en el boletín digital.</p>
+      </form>
+      <div class="caja exito" id="visita-ok" hidden tabindex="-1">
+        <span class="etiqueta" style="color:var(--azul)">Inscripción recibida</span>
+        <span class="titulo-m">Te esperamos el domingo</span>
+        <p data-resumen></p>
+        <p class="suave">Te enviaremos la confirmación a tu correo. El punto de reunión es el acceso principal, en Franklin 741.</p>
+        <div class="fila"><a class="btn btn--mostaza" href="fabricas.html">Ver las fábricas</a><button class="btn" type="button" data-volver>Hacer otra inscripción</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion--papel">
+  <div class="contenedor dos">
+    <blockquote class="cita">
+      “Buscamos restaurar y revalorizar una obra ya existente. Respondiendo a la necesidad de crear espacio para la elaboración de las artes y oficio, creando una sinergia entre los distintos emprendedores.”
+      <footer>Marcela Arias, gerente de desarrollo de Factoría Franklin</footer>
+    </blockquote>
+    <div class="pila">
+      <span class="etiqueta">Por qué sumarte</span>
+      <p class="bajada">Factoría Franklin no es solo un lugar donde ocurren exposiciones: es un proyecto de trabajo territorial en Barrio Franklin. Esta visita entrega una mirada que no se consigue recorriendo el espacio por cuenta propia.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="pie"></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  // Factor F solo tiene visita a las 12:30
+  (function () {
+    var form = document.querySelector('[data-form="visita"]');
+    function ajustar() {
+      var esF = form.querySelector('[name="recorrido"]:checked').value.indexOf('Factor F') > -1;
+      form.querySelectorAll('[data-solo-factoria]').forEach(function (r) { r.disabled = esF; });
+      if (esF) form.querySelector('[name="horario"][value="12:30"]').checked = true;
+    }
+    form.addEventListener('change', ajustar);
+    if (location.hash === '#factor-f') { form.querySelector('[name="recorrido"][value*="Factor F"]').checked = true; }
+    ajustar();
+  })();
+</script>
+</body>
+</html>
