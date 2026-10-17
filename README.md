@@ -26,6 +26,7 @@ Todo el contenido que se repite (fábricas, horarios, eventos, registro y prensa
 - La Tercera, “Las sabrosas historias que dan vida a la Factoría Franklin” (26 de enero de 2022): fundadora, Propiedades Monpla y llegada en 2019.
 - La Tercera: ubicación de Quintal en el local A1.
 - Chef & Hotel y Guía Comino: Festival del Vermut en el galpón techado.
+- Prensa: 21 notas entre enero de 2022 y septiembre de 2026, con la fecha revisada en cada medio (lista en `assets/js/data.js` → `prensa`). La nota de La Tercera “Chocolates y quesos premium” no se incluyó porque es contenido patrocinado.
 - Nota en Google: 4,7 con 970 reseñas, según la ficha de Google que muestra Wanderlog (octubre de 2026).
 
 ## Fotos

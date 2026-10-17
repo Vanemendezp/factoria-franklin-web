@@ -159,7 +159,7 @@ window.FF = {
       precio: 'Sin costo · cupos limitados', interna: 'visitas.html', img: 'assets/img/recorrido-exposicion.jpg', alt: 'Grupo recorriendo una exposición en la Factoría'
     },
     {
-      id: 'visita-factorf', tipo: 'Visitas', fecha: 'Dom 18 oct', hora: '12:30', fin: '2026-10-18',
+      id: 'visita-factorf', tipo: 'Visitas', factorF: true, fecha: 'Dom 18 oct', hora: '12:30', fin: '2026-10-18',
       titulo: 'Visita guiada Factor F: Ojos del Alma', lugar: 'Factor F, 4° piso',
       texto: 'Un recorrido de aproximadamente 45 minutos con un guía especializado por las dos partes de la exposición. No necesitas conocimientos previos de arte.',
       precio: 'Sin costo · cupos limitados', interna: 'visitas.html', img: 'assets/img/visita-guiada-ojos-del-alma.jpg', alt: 'Afiche de la visita guiada a Ojos del Alma'
@@ -209,10 +209,29 @@ window.FF = {
     etiquetas: { boletin: '', ruta: '', visita: '', convocatoria: '' }
   },
 
+  // Prensa sobre Factoría Franklin, de la más reciente a la más antigua (fechas verificadas en cada medio).
+  // factorF: true = también se muestra en la página de Factor F.
   prensa: [
-    { medio: 'La Tercera', titulo: 'Las sabrosas historias que dan vida a la Factoría Franklin', url: 'https://www.latercera.com/transformadores/noticia/las-sabrosas-historias-que-dan-vida-a-la-factoria-franklin/YJOIHZFPBZG3TFV63YHKJNG6OY/' },
-    { medio: 'National Geographic Viajes', titulo: 'Factoría Franklin, la fábrica que congrega a los artesanos chilenos del sabor', url: 'https://viajes.nationalgeographic.com.es/gastronomia/fabrica-que-congrega-a-artesanos-gastronomicos-santiago-chile_18077' },
-    { medio: 'La Tercera', titulo: 'La Vermutería del Pobre Vermut: la barra que es un hit en Franklin', url: 'https://www.latercera.com/finde/noticia/la-vermuteria-del-pobre-vermut-la-barra-que-es-un-hit-en-franklin/' },
-    { medio: 'Guía Comino', titulo: 'Festival del Vermut: el vermut chileno se toma la Factoría Franklin', url: 'https://comino.cl/festival-del-vermut-el-vermut-chileno-se-toma-la-factoria-franklin/' }
+    { fecha: '2026-09-22', medio: 'Disfruta Santiago', titulo: 'Perderse para Encontrar: arte, recorridos y talleres gratuitos en Barrio Franklin', url: 'https://disfrutasantiago.cl/perderse-para-encontrar-barrio-franklin/', factorF: true },
+    { fecha: '2026-09-21', medio: 'La Cuarta', titulo: 'Barrio Franklin alista una exposición y actividades gratuitas para todas las edades', url: 'https://www.lacuarta.com/servicios/noticia/barrio-franklin-alista-una-exposicion-y-actividades-gratuitas-para-todas-las-edades/', factorF: true },
+    { fecha: '2026-09-14', medio: 'Culturizarte', titulo: 'Perderse para encontrar: Barrio Franklin prepara una exposición y actividades gratuitas para todas las edades', url: 'https://culturizarte.cl/perderse-para-encontrar-barrio-franklin-prepara-una-exposicion-y-actividades-gratuitas-para-todas-las-edades/', factorF: true },
+    { fecha: '2026-05-25', medio: 'Marca Chile', titulo: 'Barrio Franklin: patrimonio vivo que conecta la tradición chilena con el mundo', url: 'https://www.marcachile.cl/en/barrio-franklin-patrimonio-vivo-que-conecta-la-tradicion-chilena-con-el-mundo/' },
+    { fecha: '2026-05-15', medio: 'Chef & Hotel', titulo: 'La Vermutería: la semilla del auge del vermut chileno', url: 'https://chefandhotel.cl/gastronomia/la-vermuteria-la-semilla-del-auge-del-vermut-chileno/' },
+    { fecha: '2026-03-19', medio: 'Guía Comino', titulo: 'Festival del Vermut: el vermut chileno se toma la Factoría Franklin', url: 'https://comino.cl/festival-del-vermut-el-vermut-chileno-se-toma-la-factoria-franklin/' },
+    { fecha: '2026-02-05', medio: 'La Nación', titulo: 'Qué hacer en Santiago: explora la gastronomía de Factoría Franklin', url: 'https://www.lanacion.cl/que-hacer-en-santiago-explora-la-gastronomia-de-factoria-franklin/' },
+    { fecha: '2025-12-19', medio: 'La Tercera', titulo: 'Guía del ocio: panoramas escogidos para el fin de semana del 20 y 21 de diciembre', url: 'https://www.latercera.com/finde/noticia/guia-del-ocio-panoramas-escogidos-para-el-fin-de-semana-del-20-y-21-de-diciembre/' },
+    { fecha: '2025-10-02', medio: 'La Tercera', titulo: 'Más de 40 expositores de arte y diseño, talleres y música en vivo: así será la nueva edición de Plaza Pública', url: 'https://www.latercera.com/finde/noticia/mas-de-40-expositores-de-arte-y-diseno-talleres-y-musica-en-vivo-asi-sera-la-nueva-edicion-de-plaza-publica/' },
+    { fecha: '2025-03-18', medio: 'La Tercera', titulo: 'Mirai Food Lab: la nueva vida del imperdible local de ramen en barrio Franklin', url: 'https://www.latercera.com/finde/noticia/mirai-food-lab-la-nueva-vida-del-imperdible-local-de-ramen-en-barrio-franklin/' },
+    { fecha: '2025-01-20', medio: 'La Tercera', titulo: 'Doña Ostra: patache marino desde 2 mil pesos en Franklin', url: 'https://www.latercera.com/finde/noticia/dona-ostra-patache-marino-desde-2-mil-pesos-en-franklin/' },
+    { fecha: '2025-01-08', medio: 'Revista Paula', titulo: 'Datos Paula: fin de semana en Factoría Franklin', url: 'https://www.latercera.com/paula/datos-paula-fin-de-semana-en-factoria-franklin/' },
+    { fecha: '2025-01-08', medio: 'Culto, La Tercera', titulo: 'Focalmode, una mirada a la fotografía contemporánea, tendrá su versión 2025 en Factoría Franklin', url: 'https://www.latercera.com/culto/2025/01/08/focalmode-una-mirada-a-la-fotografia-contemporanea-tendra-su-version-2025-en-factoria-franklin/' },
+    { fecha: '2023-12-18', medio: 'Culto, La Tercera', titulo: 'Exposición Focalmode llega a Factoría Franklin', url: 'https://www.latercera.com/culto/2023/12/18/exposicion-focalmode-llega-a-factoria-franklin/' },
+    { fecha: '2023-07-21', medio: 'La Tercera', titulo: 'La Vermutería del Pobre Vermut: la barra que es un hit en Franklin', url: 'https://www.latercera.com/finde/noticia/la-vermuteria-del-pobre-vermut-la-barra-que-es-un-hit-en-franklin/' },
+    { fecha: '2023-05-01', medio: 'La Tercera', titulo: 'Mirai Food Lab: la picada de ramen de lujo en barrio Franklin', url: 'https://www.latercera.com/finde/noticia/mirai-food-lab-la-picada-de-ramen-de-lujo-en-barrio-franklin/' },
+    { fecha: '2023-01-05', medio: 'Culto, La Tercera', titulo: 'Exposición de fotografía Focal Mode abre sus puertas en la Factoría Franklin', url: 'https://www.latercera.com/culto/2023/01/05/exposicion-de-fotografia-focal-mode-abre-sus-puertas-en-la-factoria-franklin/' },
+    { fecha: '2022-10-04', medio: 'National Geographic Viajes', titulo: 'Factoría Franklin, la fábrica que congrega a los artesanos chilenos del sabor', url: 'https://viajes.nationalgeographic.com.es/gastronomia/fabrica-que-congrega-a-artesanos-gastronomicos-santiago-chile_18077' },
+    { fecha: '2022-06-14', medio: '7 Caníbales', titulo: 'La Factoría Franklin y el regreso a los oficios', url: 'https://www.7canibales.com/noticias/factoria-franklin/' },
+    { fecha: '2022-04-08', medio: 'La Tercera', titulo: 'Factoría Franklin: el espacio de creación que le da nuevos sabores a Franklin', url: 'https://www.latercera.com/finde/noticia/factoria-franklin-el-espacio-de-creacion-que-le-da-nuevos-sabores-a-franklin/' },
+    { fecha: '2022-01-26', medio: 'La Tercera', titulo: 'Las sabrosas historias que dan vida a la Factoría Franklin', url: 'https://www.latercera.com/transformadores/noticia/las-sabrosas-historias-que-dan-vida-a-la-factoria-franklin/YJOIHZFPBZG3TFV63YHKJNG6OY/' }
   ]
 };

@@ -186,7 +186,8 @@
   }
   $$('[data-agenda]').forEach(function (cont) {
     var limite = parseInt(cont.getAttribute('data-agenda'), 10) || 99;
-    var vigentes = FF.eventos.filter(function (e) { return new Date(e.fin + 'T23:59:59') >= HOY; });
+    var soloF = cont.getAttribute('data-solo') === 'factor-f';
+    var vigentes = FF.eventos.filter(function (e) { return new Date(e.fin + 'T23:59:59') >= HOY && (!soloF || e.factorF); });
     var filtros = document.getElementById(cont.getAttribute('data-filtros'));
     function pintar() {
       var activo = filtros ? ($('[aria-pressed="true"]', filtros) || {}).textContent : 'Todo';
@@ -213,10 +214,93 @@
     }).join('');
   });
 
+  /* ---------- Prensa: carrusel con avance automático ---------- */
+  var MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sept', 'oct', 'nov', 'dic'];
+  function fechaCorta(iso) { var p = iso.split('-'); return parseInt(p[2], 10) + ' ' + MESES[parseInt(p[1], 10) - 1] + ' ' + p[0]; }
+  var sinMovimiento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   $$('[data-prensa]').forEach(function (cont) {
-    cont.innerHTML = FF.prensa.map(function (p) {
-      return '<a href="' + p.url + '"><small>' + esc(p.medio) + '</small><b>' + esc(p.titulo) + '</b><span class="enlace-flecha" style="align-self:flex-start;font-size:14px">Leer nota</span></a>';
-    }).join('');
+    var soloF = cont.getAttribute('data-prensa') === 'factor-f';
+    var notas = FF.prensa.filter(function (p) { return !soloF || p.factorF; })
+      .sort(function (a, b) { return a.fecha < b.fecha ? 1 : -1; });
+    cont.classList.add('carrusel');
+    cont.setAttribute('role', 'region');
+    cont.setAttribute('aria-roledescription', 'carrusel');
+    cont.setAttribute('aria-label', 'Notas de prensa');
+    cont.innerHTML =
+      '<div class="carrusel-ventana"><ul class="carrusel-pista">' + notas.map(function (p, i) {
+        return '<li class="recorte"><a href="' + p.url + '" target="_blank" rel="noopener">' +
+          '<span class="recorte-cabeza"><small>' + esc(p.medio) + '</small><time datetime="' + p.fecha + '">' + fechaCorta(p.fecha) + '</time></span>' +
+          '<b>' + esc(p.titulo) + '</b>' +
+          '<span class="recorte-pie">' + (i === 0 && !soloF ? '<span class="recorte-nuevo">Lo más reciente</span>' : '<span></span>') + '<span class="enlace-flecha">Leer nota</span></span>' +
+        '</a></li>';
+      }).join('') + '</ul></div>' +
+      '<div class="carrusel-controles">' +
+        '<span class="carrusel-cuenta mono" aria-live="polite"></span>' +
+        '<div class="carrusel-barra" aria-hidden="true"><span></span></div>' +
+        '<div class="fila" style="--gap:8px">' +
+          '<button type="button" class="carrusel-boton" data-dir="-1" aria-label="Notas anteriores">←</button>' +
+          '<button type="button" class="carrusel-boton" data-pausa aria-label="Pausar el carrusel">❚❚</button>' +
+          '<button type="button" class="carrusel-boton" data-dir="1" aria-label="Notas siguientes">→</button>' +
+        '</div>' +
+      '</div>';
+
+    var pista = $('.carrusel-pista', cont);
+    var tarjetas = $$('.recorte', cont);
+    var cuenta = $('.carrusel-cuenta', cont);
+    var barra = $('.carrusel-barra span', cont);
+    var botonPausa = $('[data-pausa]', cont);
+    var indice = 0, temporizador = null, pausadoPorUsuario = sinMovimiento, encima = false;
+
+    function porVista() { return parseInt(getComputedStyle(cont).getPropertyValue('--por'), 10) || 1; }
+    function maximo() { return Math.max(0, tarjetas.length - porVista()); }
+    function ir(n) {
+      var max = maximo();
+      indice = n > max ? 0 : n < 0 ? max : n;
+      var paso = tarjetas[0].getBoundingClientRect().width + parseFloat(getComputedStyle(pista).columnGap || 0);
+      pista.style.transform = 'translateX(' + (-indice * paso) + 'px)';
+      var desde = indice + 1, hasta = Math.min(indice + porVista(), tarjetas.length);
+      cuenta.textContent = (desde === hasta ? desde : desde + '–' + hasta) + ' de ' + tarjetas.length + ' notas';
+      barra.style.width = ((hasta / tarjetas.length) * 100) + '%';
+      $('.carrusel-controles', cont).hidden = maximo() === 0; // si todo cabe, no hay nada que mover
+      tarjetas.forEach(function (t, i) {
+        var visible = i >= indice && i < indice + porVista();
+        t.setAttribute('aria-hidden', visible ? 'false' : 'true');
+        $('a', t).tabIndex = visible ? 0 : -1;
+      });
+    }
+    function detener() { clearInterval(temporizador); temporizador = null; }
+    function arrancar() {
+      detener();
+      if (pausadoPorUsuario || encima || document.hidden || maximo() === 0) return;
+      temporizador = setInterval(function () { ir(indice + 1); }, 4500);
+    }
+    function pintarPausa() {
+      botonPausa.textContent = pausadoPorUsuario ? '▶' : '❚❚';
+      botonPausa.setAttribute('aria-label', pausadoPorUsuario ? 'Reanudar el carrusel' : 'Pausar el carrusel');
+    }
+    $$('[data-dir]', cont).forEach(function (b) {
+      b.addEventListener('click', function () { ir(indice + parseInt(b.getAttribute('data-dir'), 10)); arrancar(); });
+    });
+    botonPausa.addEventListener('click', function () { pausadoPorUsuario = !pausadoPorUsuario; pintarPausa(); arrancar(); });
+    cont.addEventListener('mouseenter', function () { encima = true; detener(); });
+    cont.addEventListener('mouseleave', function () { encima = false; arrancar(); });
+    cont.addEventListener('focusin', function () { encima = true; detener(); });
+    cont.addEventListener('focusout', function () { encima = false; arrancar(); });
+    document.addEventListener('visibilitychange', arrancar);
+    window.addEventListener('resize', function () { ir(Math.min(indice, maximo())); });
+    // deslizar con el dedo en el celular
+    var x0 = null;
+    pista.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; detener(); }, { passive: true });
+    pista.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) ir(indice + (dx < 0 ? 1 : -1));
+      arrancar();
+    });
+    pintarPausa();
+    ir(0);
+    arrancar();
   });
 
   /* ---------- Directorio de fábricas ---------- */

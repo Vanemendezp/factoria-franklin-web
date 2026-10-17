@@ -3,103 +3,163 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Factor F | Arte contemporáneo en Factoría Franklin</title>
-<meta name="description" content="Factor F, marca de arte dentro de Factoría Franklin: exposiciones de arte contemporáneo, convocatorias y visitas guiadas. 4° piso, Franklin 741. Entrada gratis previa inscripción.">
+<title>Factor F | Galería de arte de Factoría Franklin</title>
+<meta name="description" content="Factor F, la marca de arte de Factoría Franklin: 400 m² de sala en el 4° piso de Franklin 741 para exposiciones de arte contemporáneo, convocatorias y visitas guiadas. Entrada gratis previa inscripción.">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="Factor F · Factoría Franklin">
+<meta property="og:image" content="assets/img/inauguracion-factor-f.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Dela+Gothic+One&family=Roboto+Mono:wght@500;700&display=swap">
 <link rel="stylesheet" href="assets/css/styles.css">
+<style>
+.f-rojo { color: #ff5a7e; }
+.f-hero { background: var(--tinta); color: var(--papel); border-bottom: var(--borde); }
+.f-hero .contenedor { padding-block: clamp(44px, 6vw, 80px); }
+.f-hero img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 2px solid var(--papel); }
+.f-marca { font: 400 clamp(60px, 8vw, 116px)/.9 var(--display); color: #ff2d5f; letter-spacing: -.02em; white-space: nowrap; }
+.f-datos { border-top: 2px solid var(--papel); display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.f-datos li { padding: 20px var(--gutter); border-right: 1px solid #3a3f46; display: flex; flex-direction: column; gap: 4px; }
+.f-datos li:last-child { border-right: 0; }
+.f-datos b { font: 400 clamp(26px, 2.6vw, 34px)/1.1 var(--display); }
+.f-datos span { font-size: 14px; color: #c7ccd3; }
+.pilar { border-top: 6px solid var(--rojo-f); background: var(--blanco); border-left: var(--borde); border-right: var(--borde); border-bottom: var(--borde); padding: 24px; display: flex; flex-direction: column; gap: 10px; }
+.pilar h3 { font: 400 26px/1.1 var(--display); }
+.btn--rojo-claro { border-color: var(--papel); color: var(--papel); }
+</style>
 </head>
 <body data-pagina="factor-f">
 <div id="cabecera"></div>
 <main id="contenido">
 
-<section class="seccion seccion--tinta">
+<!-- 1. Qué es Factor F -->
+<section class="f-hero">
   <div class="contenedor dos">
-    <div class="pila" style="--gap:22px">
-      <span class="etiqueta" style="color:#ff5a7e">Factor F · marca de arte dentro de Factoría Franklin</span>
-      <h1 class="titulo-xl">Ojos del Alma</h1>
-      <p class="bajada">8 artistas, 86 obras sobre la pregunta: ¿qué ocurre entre el diagnóstico y la sanación?</p>
-      <div class="datos" style="background:transparent;border-color:var(--papel)">
-        <div style="border-color:var(--papel)"><small style="color:#b9bec5">Inauguración</small><span>Jueves 8 de octubre, 19:00 hrs</span></div>
-        <div style="border-color:var(--papel)"><small style="color:#b9bec5">Abierta hasta</small><span>8 de noviembre</span></div>
-        <div style="border-color:var(--papel)"><small style="color:#b9bec5">Lugar</small><span>Factor F, Franklin #741, 4° piso</span></div>
-      </div>
+    <div class="pila" style="--gap:24px">
+      <span class="etiqueta f-rojo">Galería de Factoría Franklin · 4° piso · Franklin 741</span>
+      <h1 class="pila" style="--gap:14px"><span class="f-marca">Factor F</span><span class="titulo-l" style="color:var(--papel)">Una plataforma de visibilización de arte</span></h1>
+      <p class="bajada">La marca de arte dentro de Factoría Franklin: exposiciones de arte contemporáneo, oficio y experimentación. No siempre convoca sus propias muestras; muchas veces presta el espacio para que otras curatorías tengan dónde suceder.</p>
       <div class="fila">
-        <a class="btn btn--rojo" href="visitas.html">Reservar visita guiada</a>
-        <a class="btn btn--claro" href="https://factoria-franklin.cl/ojos-del-alma-factor-f/">Leer el artículo</a>
+        <a class="btn btn--rojo" href="#vigente">Ver la exposición vigente</a>
+        <a class="btn btn--claro" href="#convocatoria">Convocatorias para artistas</a>
       </div>
     </div>
-    <img src="assets/img/ojos-del-alma.jpg" alt="Afiche de la exposición Ojos del Alma en Factor F" width="1400" height="736" style="width:100%;border:2px solid var(--papel)">
+    <img src="assets/img/inauguracion-factor-f.jpg" alt="Público en una inauguración de Factor F" width="1400" height="887" fetchpriority="high">
   </div>
+  <ul class="f-datos" style="max-width:var(--ancho);margin:0 auto;list-style:none;padding:0">
+    <li><b>400 m²</b><span>de sala de exposición</span></li>
+    <li><b>4° piso</b><span>de Factoría Franklin</span></li>
+    <li><b>Gratis</b><span>la entrada, previa inscripción</span></li>
+    <li><b>@factor__f</b><span>el registro vivo en Instagram</span></li>
+  </ul>
 </section>
 
-<section class="seccion seccion--papel">
-  <div class="contenedor dos" style="align-items:start">
-    <div class="pila">
-      <span class="etiqueta">La propuesta</span>
-      <h2 class="titulo-l">El ojo que siente y el que comprende</h2>
-      <div class="texto-largo">
-        <p>Ojos del Alma nace de una pregunta clínica de la Dra. Paola Andrea Dorta Salfate: ¿qué ocurre entre el diagnóstico y la sanación?</p>
-        <p>La medicina enseña a mirar el ojo físico. Este proyecto propone mirar los otros dos: el que siente y el que comprende. Las obras no se seleccionaron por trayectoria ni técnica: se seleccionaron por su mensaje.</p>
-      </div>
-    </div>
-    <div class="grilla" style="--min:240px;--gap:16px">
-      <div class="caja pila" style="--gap:10px;background:var(--blanco)">
-        <span class="etiqueta">Parte I</span>
-        <h3 style="font:700 20px var(--texto)">Cuatro dimensiones del alma</h3>
-        <ul class="pila" style="--gap:4px"><li>Andrea Zeledra</li><li>Verónica Garrido Córdova</li><li>Leonardo Silva</li><li>Natalia Videla</li></ul>
-      </div>
-      <div class="caja pila" style="--gap:10px;background:var(--blanco)">
-        <span class="etiqueta">Parte II</span>
-        <h3 style="font:700 20px var(--texto)">Experiencias curativas</h3>
-        <ul class="pila" style="--gap:4px"><li>Rodrigo Castro Heimpell</li><li>Gonzalo Contreras</li><li>Camila Silva Lobos</li><li>Ingrid Lauw Peña</li></ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="seccion">
-  <div class="contenedor dos">
-    <img src="assets/img/sala-exposicion.jpg" alt="Recorrido curatorial en la sala de Factor F" width="1400" height="937" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border:var(--borde)">
-    <div class="pila">
-      <span class="etiqueta">Sobre Factor F</span>
-      <h2 class="titulo-l">Una plataforma de visibilización de arte</h2>
-      <p class="bajada">Factor F abre sus 400 m² de sala en el 4° piso de la Factoría. No siempre convoca sus propias muestras: muchas veces presta el espacio para que otras curatorías tengan dónde suceder.</p>
-      <div class="datos">
-        <div><small>Exposiciones</small><span>Arte contemporáneo · oficio · experimentación</span></div>
-        <div><small>Convocatorias</small><span>Procesos creativos y nuevas materialidades</span></div>
-        <div><small>Entrada</small><span>Gratis, previa inscripción</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- Qué hace -->
 <section class="seccion seccion--papel">
   <div class="contenedor pila" style="--gap:28px">
     <div class="pila" style="--gap:10px">
-      <span class="etiqueta">Archivo curatorial</span>
-      <h2 class="titulo-l">Registro Factor F</h2>
+      <span class="etiqueta">Qué hace Factor F</span>
+      <h2 class="titulo-l">Exposiciones, convocatorias y recorridos</h2>
     </div>
     <div class="grilla" style="--min:260px">
-      <article class="evento"><img class="evento-foto" src="assets/img/perderse-para-encontrar.jpg" alt="" loading="lazy" width="600" height="400"><div class="evento-cuerpo"><div class="evento-meta"><span>Exposición</span></div><h3>Perderse para Encontrar</h3><p>Cinco años de trabajo territorial en Barrio Franklin, una iniciativa de Puebla.</p></div></article>
-      <article class="evento"><div class="evento-cartel evento-cartel--Ferias" aria-hidden="true">Expresión Botánica</div><div class="evento-cuerpo"><div class="evento-meta"><span>Exposición</span></div><h3>Expresión Botánica</h3><p>Muestra colectiva de 30 artistas seleccionados, con visita guiada.</p></div></article>
-      <article class="evento"><div class="evento-cartel evento-cartel--Visitas" aria-hidden="true">Expo Textil</div><div class="evento-cuerpo"><div class="evento-meta"><span>Exposición</span></div><h3>Expo Textil Factor F</h3><p>Arte textil contemporáneo con más de 30 artistas chilenos.</p></div></article>
-      <article class="evento"><div class="evento-cartel evento-cartel--Arte" aria-hidden="true">Formas de habitar la materia</div><div class="evento-cuerpo"><div class="evento-meta"><span>Exposición</span></div><h3>Formas de habitar la materia</h3><p>Cerámica · objeto · forma · gesto.</p></div></article>
+      <div class="pilar"><span class="etiqueta">01</span><h3>Exposiciones</h3><p>Arte contemporáneo, oficio y experimentación, con muestras propias y curatorías invitadas.</p></div>
+      <div class="pilar"><span class="etiqueta">02</span><h3>Convocatorias</h3><p>Procesos creativos y nuevas materialidades: textil, cerámica, botánica y más.</p></div>
+      <div class="pilar"><span class="etiqueta">03</span><h3>Visitas guiadas</h3><p>Recorridos con guía por cada exposición, sin costo y en grupos reducidos.</p></div>
     </div>
   </div>
 </section>
 
-<section class="seccion seccion--tinta" id="convocatoria">
+<!-- 2. Exposición vigente -->
+<section class="seccion" id="vigente">
+  <div class="contenedor dos" style="align-items:start">
+    <div class="pila" style="--gap:22px">
+      <span class="etiqueta">Exposición vigente</span>
+      <h2 class="titulo-xl">Ojos del Alma</h2>
+      <p class="bajada">8 artistas, 86 obras sobre la pregunta: ¿qué ocurre entre el diagnóstico y la sanación?</p>
+      <div class="datos">
+        <div><small>Inauguración</small><span>Jueves 8 de octubre, 19:00 hrs</span></div>
+        <div><small>Abierta hasta</small><span>8 de noviembre</span></div>
+        <div><small>Lugar</small><span>Factor F, Franklin #741, 4° piso</span></div>
+      </div>
+      <div class="texto-largo">
+        <p>Ojos del Alma nace de una pregunta clínica de la Dra. Paola Andrea Dorta Salfate. La medicina enseña a mirar el ojo físico; este proyecto propone mirar los otros dos: el que siente y el que comprende.</p>
+        <p>Las obras no se seleccionaron por trayectoria ni técnica: se seleccionaron por su mensaje.</p>
+      </div>
+      <div class="fila">
+        <a class="btn btn--rojo" href="visitas.html#factor-f">Reservar visita guiada</a>
+        <a class="btn" href="https://factoria-franklin.cl/ojos-del-alma-factor-f/">Leer el artículo</a>
+      </div>
+    </div>
+    <div class="pila" style="--gap:16px">
+      <img src="assets/img/visita-guiada-ojos-del-alma.jpg" alt="Obra de la exposición Ojos del Alma en Factor F" width="1400" height="933" loading="lazy" style="width:100%;border:var(--borde)">
+      <div class="grilla" style="--min:220px;--gap:16px">
+        <div class="caja pila" style="--gap:10px;background:var(--blanco)">
+          <span class="etiqueta">Parte I</span>
+          <h3 style="font:700 19px var(--texto)">Cuatro dimensiones del alma</h3>
+          <ul class="pila" style="--gap:4px"><li>Andrea Zeledra</li><li>Verónica Garrido Córdova</li><li>Leonardo Silva</li><li>Natalia Videla</li></ul>
+        </div>
+        <div class="caja pila" style="--gap:10px;background:var(--blanco)">
+          <span class="etiqueta">Parte II</span>
+          <h3 style="font:700 19px var(--texto)">Experiencias curativas</h3>
+          <ul class="pila" style="--gap:4px"><li>Rodrigo Castro Heimpell</li><li>Gonzalo Contreras</li><li>Camila Silva Lobos</li><li>Ingrid Lauw Peña</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Próximas actividades -->
+<section class="seccion seccion--papel" id="proximas">
+  <div class="contenedor pila" style="--gap:28px">
+    <div class="pila" style="--gap:10px">
+      <span class="etiqueta">Próximamente en Factor F</span>
+      <h2 class="titulo-l">Lo que viene</h2>
+    </div>
+    <div class="grilla" data-agenda data-solo="factor-f" style="--min:290px"></div>
+    <div class="caja fila fila--entre" style="--gap:16px;background:var(--blanco)">
+      <div class="pila" style="--gap:6px"><strong>¿Quieres saber de la próxima exposición antes que nadie?</strong><span class="suave">Las inauguraciones de Factor F llegan primero al boletín digital.</span></div>
+      <a class="btn btn--tinta" href="index.html#club">Unirme al boletín</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Exposiciones pasadas -->
+<section class="seccion">
+  <div class="contenedor pila" style="--gap:28px">
+    <div class="pila" style="--gap:10px">
+      <span class="etiqueta">Archivo curatorial</span>
+      <h2 class="titulo-l">Exposiciones pasadas</h2>
+    </div>
+    <div class="grilla" style="--min:260px">
+      <a class="evento" href="https://factoria-franklin.cl/perderse-para-encontrar-factor-f/" style="text-decoration:none"><img class="evento-foto" src="assets/img/perderse-para-encontrar.jpg" alt="" loading="lazy" width="600" height="400"><div class="evento-cuerpo"><div class="evento-meta"><span>26 sept al 4 oct 2026</span><span class="suave">Exposición</span></div><h3>Perderse para Encontrar</h3><p>Una iniciativa de Puebla que celebra cinco años de trabajo territorial en Barrio Franklin, con objetos encontrados, baldosas y memoria de barrio.</p><span class="enlace-flecha" style="align-self:flex-start">Ver registro</span></div></a>
+      <a class="evento" href="https://factoria-franklin.cl/exposicion-expresion-botanica-factor-f/" style="text-decoration:none"><div class="evento-cartel evento-cartel--Música" aria-hidden="true">Expresión Botánica</div><div class="evento-cuerpo"><div class="evento-meta"><span>Desde el 13 ago 2026</span><span class="suave">Exposición</span></div><h3>Expresión Botánica</h3><p>Muestra colectiva de 30 artistas seleccionados, con visita guiada.</p><span class="enlace-flecha" style="align-self:flex-start">Ver registro</span></div></a>
+      <a class="evento" href="https://factoria-franklin.cl/convocatoria-factor-f-ceramica-junio-2026/" style="text-decoration:none"><div class="evento-cartel evento-cartel--Arte" aria-hidden="true">Formas de habitar la materia</div><div class="evento-cuerpo"><div class="evento-meta"><span>2026</span><span class="suave">Exposición</span></div><h3>Formas de habitar la materia</h3><p>Cerámica contemporánea: objeto, forma y gesto.</p><span class="enlace-flecha" style="align-self:flex-start">Ver registro</span></div></a>
+      <article class="evento"><div class="evento-cartel evento-cartel--Visitas" aria-hidden="true">Expo Textil</div><div class="evento-cuerpo"><div class="evento-meta"><span class="suave">Exposición</span></div><h3>Expo Textil Factor F</h3><p>Arte textil contemporáneo con más de 30 artistas chilenos.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- Prensa de Factor F -->
+<section class="seccion seccion--tinta">
+  <div class="contenedor pila" style="--gap:28px">
+    <div class="pila" style="--gap:10px">
+      <span class="etiqueta f-rojo">Factor F en la prensa</span>
+      <h2 class="titulo-l">Lo que se dice de Factor F</h2>
+    </div>
+    <div class="prensa" data-prensa="factor-f"></div>
+  </div>
+</section>
+
+<!-- Convocatorias -->
+<section class="seccion seccion--papel" id="convocatoria">
   <div class="contenedor dos" style="align-items:start">
     <div class="pila">
-      <span class="etiqueta" style="color:#ff5a7e">Convocatorias</span>
+      <span class="etiqueta">Convocatorias</span>
       <h2 class="titulo-l">¿Eres artista?</h2>
       <p class="bajada">Déjanos tus datos y te avisamos cuando abra la próxima convocatoria de Factor F.</p>
-      <a class="enlace-flecha" href="https://www.instagram.com/factor__f/" style="align-self:flex-start">Sigue a @factor__f en Instagram</a>
     </div>
     <div>
-      <form class="caja form" data-form="convocatoria" data-mailchimp="convocatoria" data-exito="conv-ok" novalidate>
+      <form class="caja form" data-form="convocatoria" data-mailchimp="convocatoria" data-exito="conv-ok" novalidate style="background:var(--blanco)">
         <div class="campos">
           <div class="campo"><label for="cv-nombre">Nombre</label><input id="cv-nombre" name="nombre" required autocomplete="name"></div>
           <div class="campo"><label for="cv-correo">Correo</label><input id="cv-correo" name="correo" type="email" required autocomplete="email"></div>
@@ -115,6 +175,18 @@
         <p class="suave">Te escribiremos cuando abra la próxima convocatoria de Factor F.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Instagram -->
+<section class="seccion" style="background:var(--rojo-f);color:#fff">
+  <div class="contenedor fila fila--entre" style="--gap:24px">
+    <div class="pila" style="--gap:10px">
+      <span class="etiqueta" style="color:#fff">Instagram · @factor__f</span>
+      <h2 class="titulo-l">Sigue el registro vivo del proyecto</h2>
+      <p class="bajada">Exposiciones, procesos y comunidad en tiempo real.</p>
+    </div>
+    <a class="btn btn--claro" href="https://www.instagram.com/factor__f/" style="border-color:#fff;color:#fff">Ver perfil de Factor F</a>
   </div>
 </section>
 
