@@ -317,7 +317,8 @@
       }).join('') +
         (!activo || activo === 'Todos' ? '<a class="directorio-cta" href="contacto.html"><span><b>¿Quieres instalar tu taller aquí?</b><small>Arriendos para emprendimientos</small></span><span aria-hidden="true">→</span></a>' : '');
       var cuenta = document.getElementById(cont.getAttribute('data-cuenta'));
-      if (cuenta) cuenta.textContent = lista.length + (lista.length === 1 ? ' fábrica' : ' fábricas');
+      // La Factoría tiene 24 fábricas; la maqueta muestra las fichas publicadas hoy en factoria-franklin.cl
+      if (cuenta) cuenta.textContent = (!activo || activo === 'Todos') ? '24 fábricas en la Factoría' : lista.length + (lista.length === 1 ? ' fábrica' : ' fábricas');
     }
     if (filtros) filtros.addEventListener('cambio', pintar);
     pintar();

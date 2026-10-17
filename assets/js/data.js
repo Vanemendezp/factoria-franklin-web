@@ -160,13 +160,13 @@ window.FF = {
     },
     {
       id: 'visita-factorf', tipo: 'Visitas', factorF: true, fecha: 'Dom 18 oct', hora: '12:30', fin: '2026-10-18',
-      titulo: 'Visita guiada Factor F: Ojos del Alma', lugar: 'Factor F, 4° piso',
+      titulo: 'Visita guiada Factor F: Ojos del Alma', lugar: 'Factor F, piso 1 · Patio Central',
       texto: 'Un recorrido de aproximadamente 45 minutos con un guía especializado por las dos partes de la exposición. No necesitas conocimientos previos de arte.',
       precio: 'Sin costo · cupos limitados', interna: 'visitas.html', img: 'assets/img/visita-guiada-ojos-del-alma.jpg', alt: 'Afiche de la visita guiada a Ojos del Alma'
     },
     {
       id: 'ojos', tipo: 'Arte', fecha: 'Hasta el 8 de noviembre', hora: 'Inaugurada el 8 de octubre', fin: '2026-11-08',
-      titulo: 'Ojos del Alma', lugar: 'Factor F, 4° piso',
+      titulo: 'Ojos del Alma', lugar: 'Factor F, piso 1 · Patio Central',
       texto: '8 artistas y 86 obras a partir de una pregunta clínica de la Dra. Paola Andrea Dorta Salfate: ¿qué ocurre entre el diagnóstico y la sanación?',
       precio: 'Entrada gratis', interna: 'factor-f.html'
     },

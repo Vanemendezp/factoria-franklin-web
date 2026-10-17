@@ -8,7 +8,7 @@ Prototipo navegable de la nueva web de Factoría Franklin (Franklin 741, Santiag
 |---|---|
 | `index.html` | Portada: agenda del fin de semana, planificador de visita, boletín, directorio de fábricas, Factor F, arriendo y prensa |
 | `agenda.html` | Próximas actividades con filtros y registro de actividades pasadas |
-| `fabricas.html` | Directorio de las 13 fábricas con horario |
+| `fabricas.html` | Directorio de fábricas con horario. La Factoría tiene 24; la maqueta muestra las 13 fichas publicadas hoy y las 11 restantes se cargan con datos reales en WordPress |
 | `fabrica.html#<fabrica>` | Ficha de cada fábrica (por ejemplo `fabrica.html#pobre-vermut`) |
 | `factor-f.html` | Ojos del Alma, sobre Factor F, archivo y lista de convocatorias |
 | `visitas.html` | Inscripción a visitas guiadas |
